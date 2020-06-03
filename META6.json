@@ -1,0 +1,37 @@
+{
+    "meta-version"   : "1",
+    "perl"           : "6.c",
+    "name"           : "JSON::simd",
+    "api"            : "1",
+    "version"        : "0.1",
+    "auth"           : "github:CurtTilmes",
+    "description"    : "Raku bindings for simdjson",
+    "license"        : "NASA-1.3",
+    "test-depends"   : [ "Test" ],
+    "depends"        : {
+        "runtime": {
+            "requires": [
+                "JSON::Fast",
+                "NativeCall",
+                "NativeHelpers::Callback"
+            ]
+        },
+        "build": { "requires" : [ "Native::Compile" ] },
+        "test":  { "requires" : [ "Test" ] }
+    },
+    "resources"      : [
+        "libraries/simdjson"
+    ],
+    "authors"        : [ "Curt Tilmes <Curt.Tilmes@nasa.gov>" ],
+    "provides"       : {
+        "JSON::simd" : "lib/JSON/simd.rakumod"
+    },
+    "tags" : [
+        "JSON", "NDJSON", "SIMDJSON"
+    ],
+    "support" : {
+        "email" : "Curt.Tilmes@nasa.gov",
+        "bugtracker" : "https://github.com/CurtTilmes/raku-jsonsimd/issues",
+        "source" : "https://github.com/CurtTilmes/raku-jsonsimd.git"
+    }
+}
